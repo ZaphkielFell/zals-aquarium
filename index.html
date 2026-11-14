@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aero Artist Archive — Digital Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<!--Bubble Cursor Trail-->
+<script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+<script type="module">
+  import { bubbleCursor } from 'https://unpkg.com/cursor-effects@latest/dist/esm.js'
+
+  new bubbleCursor();
+</script>
+ <!--scrolling browser name-->
+    <script>
+    msg = ""
+    msg = " ㅤㅤㅤZal's Aquarium🐟.˚○ • ° " + msg;position = 0;
+    function scrolltitle() {
+  document.title = msg.substring(position, msg.length) + msg.substring(0, position); position++;
+  if (position > msg.length) position = 0
+  window.setTimeout("scrolltitle()",170);
+  }
+  scrolltitle();
+  </script>
+  
+    <!--BG Music-->
+  <audio id="homeBG" autoplay loop>
+  <source src="audio/Insaniquarium! Deluxe Original Soundtrack - Tank 2.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<!--lower audio vol-->
+<script>
+   var audio = document.getElementById("homeBG");
+   audio.volume = 0.3;
+</script>
+  
+<body>
+
+  <!-- Main Vista-Style Glass Window -->
+  <div class="aero-window">
+    <!-- Title Bar -->
+    <header class="titlebar">
+      <div class="titlebar-left">
+        <span class="aero-logo" aria-hidden="true"></span>
+        <span class="window-title">°¬🐠🐟!! Zal's Aquarium !!🌐¬°</span>
+      </div>
+
+      <!-- Light / Dark Mode Toggle -->
+      <button id="themeToggle" class="mode-toggle" aria-pressed="false" aria-label="Toggle Dark Mode">
+        <span id="modeIcon" aria-hidden="true">🌙</span>
+        <span id="modeLabel">Moon Time</span>
+      </button>
+    </header>
+
+    <!-- Navigation Toolbar -->
+    <nav class="navbar" aria-label="Main Navigation">
+      <div class="nav-tabs" role="tablist">
+        <button class="gel-btn active" data-view="gallery">Home</button>
+        <button class="gel-btn" data-view="about">About Me</button>
+        <button class="gel-btn" data-view="contact">Socials</button>
+      </div>
+    </nav>
+
+    <!-- Main Layout Grid -->
+    <div class="workspace">
+      <!-- Left Sidebar -->
+      <aside class="sidebar">
+        <section class="glass-panel">
+          <div class="panel-header">Profile</div>
+          <div class="panel-body">
+            <div class="avatar-box">
+           <img class="avatar-orb" src="https://media.discordapp.net/attachments/1135452596379865148/1561282081462681630/Fell.png?ex=6af9613f&is=6af80fbf&hm=9834b28be81723f70566e4fe85eeca4223e9e93ad60dc40194ccf89f6bc97dc8&format=webp&quality=lossless&width=1024&height=975">
+              <div>
+                <strong>Zal</strong>
+                <p class="muted">Animator & Character Designer</p>
+              </div>
+            </div>
+            <p class="bio-text">
+             <i>He/They</i><br>
+            Just a guy and his fih🐟
+            </p>
+          </div>
+        </section>
+
+        <section class="glass-panel">
+          <div class="panel-header">My Works</div>
+          <div class="panel-body project-list">
+            <button class="project-btn active" data-project="general">General Art </button>
+            <button class="project-btn" data-project="mekamajik">Mekanika Majika</button>
+            <button class="project-btn" data-project="paralos">Para Los Filipinos</button>
+            <button class="project-btn" data-project="otrb">Over the Rainbow Bridge</button>
+          
+          </div>
+        </section>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="content">
+        <!-- View 1: Gallery -->
+        <section id="view-gallery" class="view active">
+          <div class="section-banner">
+            <h1 id="projectHeading">General Art</h1>
+            <p id="projectSubtitle">These are general art pieces that I just do on my free time!</p>
+          </div>
+          <div id="galleryGrid" class="gallery-grid"></div>
+        </section>
+
+        <!-- View 2: About -->
+        <section id="view-about" class="view" hidden>
+          <div class="glass-panel">
+            <div class="panel-header">About Me</div>
+            <div class="panel-body">
+              <p>Welcome to my Website!(and Portfolio)<br>I'm an Animator, 2D/3D Artist, Character Designer.<br>
+              I mainly do 2D illustrations and animation but I have experience with 3D Animations as a whole, also thinking of going into Toy Designing ;)
+              But who knows, I just go with the flow.
+              <br>
+			  <br>
+              <h3>Softwares I use</h3>
+              <ul class="tool-list">
+                <li><strong>Affinity</strong> — 2D Artworks</li>
+				<li><strong>Adobe Animate</strong> — 2D Animations</li>
+                <li><strong>Blender</strong> — 3D Models & Animations</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- View 3: Socials -->
+        <section id="view-contact" class="view" hidden>
+          <div class="glass-panel">
+            <div class="panel-header">Socials!</div>
+            <div class="panel-body">
+              <p class="social-intro">Want more of my work? Follow my Socials!</p>
+              
+              <div class="social-list">
+
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="social-item">
+                  <span class="social-icon">📸</span>
+                  <div class="social-info">
+                    <strong>Instagram</strong>
+                    <span class="muted">@zaphkielfell</span>
+                  </div>
+                  <span class="social-arrow">↗</span>
+                </a>
+
+                <a href="https://zalifur-malphas.tumblr.com" target="_blank" rel="noopener" class="social-item">
+                  <span class="social-icon">🎨</span>
+                  <div class="social-info">
+                    <strong>Tumblr</strong>
+                    <span class="muted">@zalifur-malphas</span>
+                  </div>
+                  <span class="social-arrow">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer Bar -->
+    <footer class="statusbar">
+      <span>🐬˚˖𓍢ִ໋ 🐋✧˚.🐟⋆</span>
+    </footer>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-labelledby="lbTitle">
+    <div class="lightbox-window">
+      <div class="titlebar">
+        <span id="lbTitle" class="window-title">Artwork Preview</span>
+        <button id="lbClose" class="close-btn" aria-label="Close preview">✕</button>
+      </div>
+      <div class="lightbox-body">
+        <div id="lbArtwork" class="lb-artwork"></div>
+        <div class="lb-meta">
+          <span id="lbProject" class="tag">Project</span>
+          <p id="lbDesc"></p>
+          <p class="muted"><strong>Tools:</strong> <span id="lbTools"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
